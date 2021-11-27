@@ -1,7 +1,7 @@
 {
   "extends": [
-    "airbnb",
-    "airbnb/hooks",
+    //"airbnb",
+    //"airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "prettier/react",
@@ -26,6 +26,7 @@
         "extensions": [".ts", ".tsx"]
       }
     ],
+    "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": [
       "error",
       {
