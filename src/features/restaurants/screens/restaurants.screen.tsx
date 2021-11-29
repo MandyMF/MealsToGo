@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { Searchbar, ActivityIndicator, Colors } from 'react-native-paper';
+import {  ActivityIndicator, Colors } from 'react-native-paper';
 import { FlatList, TouchableOpacity, View} from 'react-native';
 import styled from 'styled-components/native';
 import { RestaurantInfoCard } from '../components/restaurant-info-card.component';
