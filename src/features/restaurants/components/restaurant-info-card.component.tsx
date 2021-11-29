@@ -6,16 +6,19 @@ import star from '../../../../assets/star';
 import open from '../../../../assets/open';
 import { Icon, RestaurantCard, Rating, RestaurantCardCover, Address, Info, Section, SectionEnd } from './restaurant-info-card.styles'
 
-type RestaurantProps = {
+/*type RestaurantProps = {
   name: string;
   photos: string;
   address: string;
   isOpenNow: boolean;
   rating: number;
-};
+  icon: string;
+  isClosedTemporarily: boolean;
+};*/
 
 
-export const RestaurantInfoCard = (restaurant: RestaurantProps) => {
+export const RestaurantInfoCard = ({ restaurant = {} }) => {
+
   const {
     name = 'Some Restaurant',
     icon,
@@ -29,7 +32,6 @@ export const RestaurantInfoCard = (restaurant: RestaurantProps) => {
   } = restaurant;
 
   const raitingArray = Array.from(new Array(Math.floor(rating)));
-  console.log(raitingArray);
   return (
     <RestaurantCard elevation={5}>
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
@@ -37,8 +39,8 @@ export const RestaurantInfoCard = (restaurant: RestaurantProps) => {
       <Text variant="label">{name}</Text>
       <Section>
       <Rating>
-      {raitingArray.map(() =>(
-      <SvgXml xml={star} width={20} height={20}></SvgXml>
+      {raitingArray.map((current, index) =>(
+      <SvgXml key={index} xml={star} width={20} height={20}></SvgXml>
       ))}
       </Rating>
       <SectionEnd>
