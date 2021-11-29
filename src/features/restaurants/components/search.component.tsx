@@ -12,6 +12,7 @@ export const Search = () => {
     const {keyword, search} = useContext(LocationContext);
     const [searchKeyword, setSearchKeyword] = useState(keyword);
 
+
     return (
         <SearchContainer>
             <Searchbar 
