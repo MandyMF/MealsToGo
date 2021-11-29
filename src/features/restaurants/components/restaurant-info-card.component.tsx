@@ -5,6 +5,7 @@ import { Text } from '../../../components/typography/text.component';
 import star from '../../../../assets/star';
 import open from '../../../../assets/open';
 import { Icon, RestaurantCard, Rating, RestaurantCardCover, Address, Info, Section, SectionEnd } from './restaurant-info-card.styles'
+import { Favourite } from '../../../components/favourites/favourite.component';
 
 /*type RestaurantProps = {
   name: string;
@@ -35,6 +36,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const raitingArray = Array.from(new Array(Math.floor(rating)));
   return (
     <RestaurantCard elevation={5}>
+      <Favourite restaurant = {restaurant}/>
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
       <Info>
       <Text variant="label">{name}</Text>
